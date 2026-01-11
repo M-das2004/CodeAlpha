@@ -18,7 +18,7 @@ def chatbot_response(user_input):
     else:
         return "Sorry, I do not understand."
 
-print("🤖 Simple Chatbot")
+print("Simple Chatbot")
 print("Type 'bye' to exit\n")
 
 while True:
@@ -28,3 +28,4 @@ while True:
 
     if user_message.lower() == "bye":
         break
+
