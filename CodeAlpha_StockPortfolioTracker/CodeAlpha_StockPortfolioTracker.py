@@ -12,7 +12,7 @@ stock_prices = {
 portfolio = {}
 total_investment = 0
 
-print("📈 Stock Portfolio Tracker")
+print("Stock Portfolio Tracker")
 print("Enter stock details (type 'done' to finish)\n")
 
 while True:
@@ -22,7 +22,7 @@ while True:
         break
 
     if stock not in stock_prices:
-        print("❌ Stock not available.\n")
+        print("Stock not available.\n")
         continue
 
     quantity = int(input("Enter quantity: "))
@@ -33,7 +33,7 @@ with open("portfolio.csv", "w", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(["Stock", "Quantity", "Price", "Total Value"])
 
-    print("\n📊 Portfolio Summary")
+    print("\nPortfolio Summary")
     for stock, qty in portfolio.items():
         value = stock_prices[stock] * qty
         total_investment += value
@@ -42,5 +42,6 @@ with open("portfolio.csv", "w", newline="") as file:
 
     writer.writerow(["Total Investment", "", "", total_investment])
 
-print(f"\n💰 Total Investment Value: ₹{total_investment}")
-print("📁 Data saved to portfolio.csv")
+print(f"\n Total Investment Value: ₹{total_investment}")
+print("Data saved to portfolio.csv")
+
